@@ -55,7 +55,7 @@ const item = {
 
 export default function Habits() {
   return (
-    <section id="habits" className="section-blush py-24 overflow-hidden">
+    <section id="habits" className="section-blush py-14 sm:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <SectionHeader

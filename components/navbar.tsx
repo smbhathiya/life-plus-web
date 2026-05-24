@@ -72,7 +72,7 @@ export default function Navbar() {
 
           {/* Mobile burger */}
           <button
-            className="md:hidden p-2 rounded-lg text-stone-500 hover:text-[#ec4899] hover:bg-pink-50 transition-colors"
+            className="md:hidden p-3 rounded-xl text-stone-500 hover:text-[#ec4899] hover:bg-pink-50 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
@@ -95,7 +95,7 @@ export default function Navbar() {
                 <a
                   key={l.label}
                   href={l.href}
-                  className="text-sm font-medium text-stone-500 hover:text-[#ec4899] py-2 transition-colors"
+                  className="text-sm font-medium text-stone-500 hover:text-[#ec4899] py-3 transition-colors min-h-[44px] flex items-center"
                   onClick={() => setMenuOpen(false)}
                 >
                   {l.label}

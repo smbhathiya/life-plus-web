@@ -8,7 +8,7 @@ interface SectionHeaderProps {
   title: string
   highlight: string
   subtitle: string
-  titleFirst?: boolean   // if true: title comes before highlight
+  titleFirst?: boolean
 }
 
 export default function SectionHeader({ badge, title, highlight, subtitle, titleFirst }: SectionHeaderProps) {
@@ -18,7 +18,7 @@ export default function SectionHeader({ badge, title, highlight, subtitle, title
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.6 }}
-      className="text-center mb-16"
+      className="text-center mb-10 sm:mb-16"
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
@@ -26,13 +26,13 @@ export default function SectionHeader({ badge, title, highlight, subtitle, title
         viewport={{ once: true }}
         transition={{ duration: 0.4, ease: "backOut" }}
       >
-        <Badge className="bg-pink-100 text-pink-600 hover:bg-pink-100 border-0 mb-4 px-4 py-1.5 text-sm font-semibold">
+        <Badge className="bg-pink-100 text-pink-600 hover:bg-pink-100 border-0 mb-4 px-4 py-1.5 text-xs sm:text-sm font-semibold">
           {badge}
         </Badge>
       </motion.div>
 
       <h2
-        className="text-4xl sm:text-5xl font-bold text-[#1c1917] mb-4"
+        className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1c1917] mb-3 sm:mb-4 leading-tight"
         style={{ fontFamily: "var(--font-poppins)" }}
       >
         {titleFirst ? (
@@ -85,7 +85,7 @@ export default function SectionHeader({ badge, title, highlight, subtitle, title
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.25 }}
-        className="text-stone-500 max-w-xl mx-auto text-lg"
+        className="text-stone-500 max-w-xl mx-auto text-base sm:text-lg px-2"
       >
         {subtitle}
       </motion.p>

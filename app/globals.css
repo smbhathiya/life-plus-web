@@ -133,3 +133,19 @@
 .section-blush {
   background: #fdf2f8;
 }
+
+/* Hide scrollbar but keep scrollability (for tab strips on mobile) */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Ensure tap targets are at least 44px on mobile */
+@media (max-width: 640px) {
+  button, a, [role="button"] {
+    min-height: 44px;
+  }
+}

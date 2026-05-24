@@ -57,7 +57,7 @@ export default function Footer() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
-          className="py-14 grid grid-cols-1 sm:grid-cols-3 gap-10"
+          className="py-10 sm:py-14 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10"
         >
           {/* Brand column */}
           <motion.div variants={item}>

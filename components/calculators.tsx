@@ -346,7 +346,7 @@ const cardAnim  = { hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, 
 
 export default function Calculators() {
   return (
-    <section id="calculators" className="section-light py-24">
+    <section id="calculators" className="section-light py-14 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <SectionHeader

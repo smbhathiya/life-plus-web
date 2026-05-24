@@ -113,7 +113,7 @@ function FoodCard({ emoji, name, cal, benefit }: { emoji: string; name: string; 
 /* ── Section ──────────────────────────────────────────────── */
 export default function Nutrition() {
   return (
-    <section id="nutrition" className="section-light py-24">
+    <section id="nutrition" className="section-light py-14 sm:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <SectionHeader
@@ -131,12 +131,12 @@ export default function Nutrition() {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <Tabs defaultValue="fruits">
-            <TabsList className="flex w-full sm:w-auto mx-auto mb-10 bg-pink-50 border border-pink-100 p-1 rounded-2xl h-auto gap-1 flex-wrap justify-center">
+            <TabsList className="flex w-full overflow-x-auto mx-auto mb-8 sm:mb-10 bg-pink-50 border border-pink-100 p-1 rounded-2xl h-auto gap-1 justify-start sm:justify-center scrollbar-none">
               {categories.map((cat) => (
                 <TabsTrigger
                   key={cat.key}
                   value={cat.key}
-                  className="rounded-xl px-5 py-2 text-sm font-semibold text-stone-500 data-[state=active]:gradient-bg data-[state=active]:text-white data-[state=active]:shadow-md transition-all"
+                  className="rounded-xl px-4 py-2 text-xs sm:text-sm font-semibold text-stone-500 data-[state=active]:gradient-bg data-[state=active]:text-white data-[state=active]:shadow-md transition-all whitespace-nowrap shrink-0"
                 >
                   <span className="mr-1.5">{cat.icon}</span>
                   {cat.label}
