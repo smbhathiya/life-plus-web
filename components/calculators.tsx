@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Scale, Droplets, Flame } from "lucide-react"
+import SectionHeader from "@/components/section-header"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Button } from "@/components/ui/button"
@@ -348,26 +349,13 @@ export default function Calculators() {
     <section id="calculators" className="section-light py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <Badge className="bg-pink-100 text-pink-600 hover:bg-pink-100 border-0 mb-4 px-4 py-1.5 text-sm font-semibold">
-            Health Tools
-          </Badge>
-          <h2
-            className="text-4xl sm:text-5xl font-bold text-[#1c1917] mb-4"
-            style={{ fontFamily: "var(--font-poppins)" }}
-          >
-            Your Personal <span className="gradient-text">Health Tools</span>
-          </h2>
-          <p className="text-stone-500 max-w-xl mx-auto text-lg">
-            Quick, accurate calculators to understand your body and set healthy goals.
-          </p>
-        </motion.div>
+        <SectionHeader
+          badge="Health Tools"
+          title="Your Personal"
+          highlight="Health Tools"
+          subtitle="Quick, accurate calculators to understand your body and set healthy goals."
+          titleFirst
+        />
 
         <motion.div
           variants={container}
@@ -380,7 +368,8 @@ export default function Calculators() {
             <motion.div
               key={id}
               variants={cardAnim}
-              whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(236,72,153,0.12)" }}
+              whileHover={{ y: -8, boxShadow: "0 24px 48px rgba(236,72,153,0.15)" }}
+              whileTap={{ scale: 0.99 }}
               className="bg-white rounded-3xl p-6 shadow-md border border-pink-50 flex flex-col gap-5 transition-shadow"
             >
               <div className="flex items-center gap-3">
