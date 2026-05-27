@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import SectionHeader from "@/components/section-header"
 import {
@@ -136,6 +137,13 @@ export default function Habits() {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="mt-16 rounded-3xl gradient-bg p-8 sm:p-12 text-center text-white shadow-xl relative overflow-hidden"
         >
+          {/* Photo behind the gradient — drop habits-bg.jpg in public/images */}
+          <Image
+            src="/images/habits-bg.jpg"
+            fill
+            alt=""
+            className="object-cover mix-blend-overlay opacity-20"
+          />
           {/* Decorative blobs inside banner */}
           <motion.div
             animate={{ scale: [1, 1.3, 1], opacity: [0.15, 0.3, 0.15] }}

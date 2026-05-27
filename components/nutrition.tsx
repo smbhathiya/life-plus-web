@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import Image from "next/image"
 import { Leaf, Zap, Flame, UtensilsCrossed, CheckCircle2 } from "lucide-react"
 import SectionHeader from "@/components/section-header"
 
@@ -225,31 +226,40 @@ export default function Nutrition() {
           transition={{ duration: 0.5, delay: 0.15 }}
           className="mt-14 rounded-3xl overflow-hidden"
         >
-          <div className="gradient-bg p-8 sm:p-12 flex flex-col sm:flex-row items-center gap-8">
-            <div className="flex-1 text-white">
-              <h3
-                className="text-2xl sm:text-3xl font-bold mb-4"
-                style={{ fontFamily: "var(--font-poppins)" }}
-              >
-                A Simple Healthy Day
-              </h3>
-              <div className="flex flex-col gap-2.5 text-pink-100 text-sm">
-                {[
-                  { meal: "Breakfast", example: "Oatmeal + banana + green tea"          },
-                  { meal: "Lunch",     example: "Grilled chicken + salad + brown rice"  },
-                  { meal: "Snack",     example: "Greek yogurt + mixed berries"           },
-                  { meal: "Dinner",    example: "Salmon + steamed veg + quinoa"          },
-                ].map(({ meal, example }) => (
-                  <div key={meal} className="flex items-start gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-pink-200 mt-0.5 shrink-0" />
-                    <span>
-                      <strong className="text-white">{meal}:</strong> {example}
-                    </span>
-                  </div>
-                ))}
+          <div className="relative gradient-bg p-8 sm:p-12 flex flex-col sm:flex-row items-center gap-8">
+            {/* Photo behind the gradient — drop nutrition-banner.jpg in public/images */}
+            <Image
+              src="/images/nutrition-banner.jpg"
+              fill
+              alt=""
+              className="object-cover mix-blend-overlay opacity-25"
+            />
+            <div className="relative z-10 flex flex-col sm:flex-row items-center gap-8 w-full">
+              <div className="flex-1 text-white">
+                <h3
+                  className="text-2xl sm:text-3xl font-bold mb-4"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  A Simple Healthy Day
+                </h3>
+                <div className="flex flex-col gap-2.5 text-pink-100 text-sm">
+                  {[
+                    { meal: "Breakfast", example: "Oatmeal + banana + green tea"          },
+                    { meal: "Lunch",     example: "Grilled chicken + salad + brown rice"  },
+                    { meal: "Snack",     example: "Greek yogurt + mixed berries"           },
+                    { meal: "Dinner",    example: "Salmon + steamed veg + quinoa"          },
+                  ].map(({ meal, example }) => (
+                    <div key={meal} className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-pink-200 mt-0.5 shrink-0" />
+                      <span>
+                        <strong className="text-white">{meal}:</strong> {example}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
+              <div className="text-8xl sm:text-9xl select-none opacity-80">🥗</div>
             </div>
-            <div className="text-8xl sm:text-9xl select-none opacity-80">🥗</div>
           </div>
         </motion.div>
 

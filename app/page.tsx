@@ -5,6 +5,7 @@ import Calculators from "@/components/calculators"
 import Habits from "@/components/habits"
 import Nutrition from "@/components/nutrition"
 import Footer from "@/components/footer"
+import BackToTop from "@/components/back-to-top"
 
 export default function Page() {
   return (
@@ -17,6 +18,7 @@ export default function Page() {
       <Nutrition />
       {/* Fitness, Mental, Facts, CTA — coming next */}
       <Footer />
+      <BackToTop />
     </main>
   )
 }
