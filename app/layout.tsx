@@ -18,7 +18,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Life Plus — Live Better Every Day",
+  title: "Life Plus - Live Better Every Day",
   description:
     "Simple tools and healthy lifestyle guidance to help you improve your daily life and well-being. BMI calculator, water intake, calorie calculator, nutrition tips, fitness guide, and more.",
   keywords: [
